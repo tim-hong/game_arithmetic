@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/awesomplete.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/awesomplete.js') }}"></script>
+    <script src="{{ url_for('static', filename='data/vocab.js') }}"></script>
+    <script src="{{ url_for('static', filename='data/wiki.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+<div id ="latest">
+    <h3>Latest Update</h3>
+    <h4 id="message">None</h4>
+</div>
+<div id="srch">
+    <button class="btn btn-default btn-primary" onclick="srch()"><h4>Search Similar Games</h4></button>
+</div>
+<div class="container">
+    <div id="posgame">
+        <h4>Positive Games</h4>
+        <div class="input-group">
+            <input id="pginp" type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" onclick="ent(0)">+</button>
+            </span>
+        </div>
+    </div>
+    <div id="neggame">
+        <h4>Negative Games</h4>
+        <div class="input-group">
+            <input id="nginp" type="text" class="form-control">
+            <span class="input-group-btn">
+               <button class="btn btn-default" type="button" onclick="ent(1)">+</button>
+            </span>
+        </div>
+    </div>
+    <div id="posterm">
+        <h4>Positive Terms</h4>
+        <div class="input-group">
+            <input id="ptinp" type="text" class="form-control">
+            <span class="input-group-btn">
+               <button class="btn btn-default" type="button" onclick="ent(2)">+</button>
+            </span>
+        </div>
+    </div>
+    <div id="negterm">
+        <h4>Negative Terms</h4>
+        <div class="input-group">
+            <input id="ntinp" type="text" class="form-control">
+            <span class="input-group-btn">
+               <button class="btn btn-default" type="button" onclick="ent(3)">+</button>
+            </span>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/comp.js') }}"></script>
+</div>
+</body>
+</html>
